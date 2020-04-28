@@ -1,0 +1,25 @@
+{
+  "name": "authtdd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Breno Hennrique",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.5",
+    "nodemon": "^2.0.3",
+    "sequelize-cli": "^5.5.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.0.3",
+    "sequelize": "^5.21.7"
+  }
+}
