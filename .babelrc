@@ -2,5 +2,11 @@
   "presets": [
     "@babel/preset-env"
   ],
-  "plugins": ["@babel/proposal-class-properties"]
+  "plugins": ["@babel/proposal-class-properties"],
+
+  "env" : {
+    "test" : {
+      "plugins" : [ "@babel/plugin-transform-runtime" ]
+    }
+  }
 }

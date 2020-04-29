@@ -5,21 +5,32 @@
   "author": "Breno Hennrique",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server.js"
+    "dev": "nodemon --exec babel-node src/server.js --ignore __tests__",
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/node": "^7.8.7",
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/preset-env": "^7.9.5",
-    "nodemon": "^2.0.3",
-    "sequelize-cli": "^5.5.1"
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.0",
+    "@babel/node": "7.8.7",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-transform-runtime": "7.9.0",
+    "@babel/preset-env": "7.9.5",
+    "factory-girl": "5.0.4",
+    "faker": "4.1.0",
+    "jest": "25.5.0",
+    "nodemon": "2.0.3",
+    "sequelize-cli": "5.5.1",
+    "sqlite3": "4.2.0",
+    "supertest": "4.0.2"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "pg": "^8.0.3",
-    "sequelize": "^5.21.7"
+    "bcryptjs": "2.4.3",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "jsonwebtoken": "8.5.1",
+    "pg": "8.0.3",
+    "sequelize": "5.21.7"
   }
 }
